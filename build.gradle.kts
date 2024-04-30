@@ -12,26 +12,21 @@ publishing {
     repositories {
         maven {
             name = "GitHubPackages"
-            url = uri("https://github.com/satohu20xx/KMM-Sample")
+            url = uri("https://maven.pkg.github.com/satohu20xx/KMM-Sample")
             credentials {
                 username =
                     "satohu20xx" // project.findProperty("gpr.user") as String? ?: System.getenv("USERNAME")
                 password =
-                    "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" // project.findProperty("gpr.key") as String? ?: System.getenv("TOKEN")
+                    "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" // project.findProperty("gpr.key") as String? ?: System.getenv("TOKEN")
             }
         }
     }
     publications {
         register<MavenPublication>("gpr") {
             groupId = "com.choilabo"
-            artifactId = "kmmsampelibrary"
+            artifactId = "kmm-sample-library"
             version = "0.0.1"
-//            from(components["java"])
-//            pom {
-//                name = "Satohu20xx KMM Sample"
-//                description = "sample"
-//                url = "https://github.com/satohu20xx/KMM-Sample"
-//            }
+            artifact("$projectDir/shared/build/outputs/aar/shared-release.aar")
         }
     }
 }
