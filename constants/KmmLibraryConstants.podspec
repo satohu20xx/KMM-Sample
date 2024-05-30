@@ -2,7 +2,7 @@ Pod::Spec.new do |spec|
     spec.name                     = 'KmmLibraryConstants'
     spec.version                  = '0.0.1'
     spec.homepage                 = 'https://github.com/satohu20xx/KMM-Sample'
-    spec.source                   = { :git=> 'https://github.com/satohu20xx/KMM-Sample'}
+    spec.source                   = { :git=> 'https://github.com/satohu20xx/KMM-Sample.git'}
     spec.authors                  = { 'satohu20xx' => 'satohu20xx@gmail.com' }
     spec.license                  = { :type => 'MIT', :file => 'LICENSE' }
     spec.summary                  = 'Some description for the Shared Module'
