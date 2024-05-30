@@ -1,5 +1,5 @@
 Pod::Spec.new do |spec|
-    spec.name                     = 'constants'
+    spec.name                     = 'KmmLibraryConstants'
     spec.version                  = '0.0.1'
     spec.homepage                 = 'https://github.com/satohu20xx/KMM-Sample'
     spec.source                   = { :git=> 'https://github.com/satohu20xx/KMM-Sample'}
