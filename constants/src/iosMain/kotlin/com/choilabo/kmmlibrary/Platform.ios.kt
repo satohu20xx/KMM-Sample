@@ -1,4 +1,4 @@
-package com.choilabo.kmmsampelibrary
+package com.choilabo.kmmlibrary
 
 import platform.UIKit.UIDevice
 

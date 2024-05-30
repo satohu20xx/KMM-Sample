@@ -1,7 +1,6 @@
-import org.jetbrains.kotlin.gradle.plugin.mpp.apple.XCFramework
-
 plugins {
     alias(libs.plugins.kotlinMultiplatform)
+    alias(libs.plugins.kotlinCocoapods)
     alias(libs.plugins.androidLibrary)
 }
 
@@ -13,20 +12,21 @@ kotlin {
             }
         }
     }
-    
-    val xcf = XCFramework()
-    listOf(
-        iosX64(),
-        iosArm64(),
-        iosSimulatorArm64()
-    ).forEach {
-        it.binaries.framework {
-            baseName = "shared"
-            xcf.add(this)
+    iosX64()
+    iosArm64()
+    iosSimulatorArm64()
+
+    cocoapods {
+        summary = "Some description for the Shared Module"
+        homepage = "Link to the Shared Module homepage"
+        version = "1.0"
+        ios.deploymentTarget = "16.0"
+        framework {
+            baseName = "constants"
             isStatic = true
         }
     }
-
+    
     sourceSets {
         commonMain.dependencies {
             //put your multiplatform dependencies here
@@ -38,10 +38,10 @@ kotlin {
 }
 
 android {
-    namespace = "com.choilabo.kmmsampelibrary"
+    namespace = "com.choilabo.kmmlibrary"
     compileSdk = 34
     defaultConfig {
-        minSdk = 24
+        minSdk = 21
     }
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_1_8

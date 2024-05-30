@@ -1,4 +1,4 @@
-package com.choilabo.kmmsampelibrary
+package com.choilabo.kmmlibrary
 
 class Greeting {
     private val platform: Platform = getPlatform()

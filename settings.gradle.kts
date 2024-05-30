@@ -14,5 +14,5 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "KMM_Sampe_Library"
-include(":shared")
+rootProject.name = "KMM_Library"
+include(":constants")

@@ -1,2 +1,0 @@
-# KMM-Sample
-KMM Sample
